@@ -1,0 +1,308 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+
+
+.title {
+position: absolute;
+left: 480px;
+top: -50px;
+}
+
+hr {margin-top: 80px;}
+
+ul {/* 取消ul預設的內縮及樣式 */ 
+  list-style: none;
+}
+
+ul.menu {
+  display: inline-block;
+  font-family: 微軟正黑體;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 100px;
+  right: 550px;
+  background-color: #E8F5E9 ;
+}
+
+ul.menu li {
+  position: relative;
+  white-space: nowrap;
+  background-color: #E8F5E9 ;
+}
+
+ul.menu>li {
+  float: left;
+  background-color: #E8F5E9 ;
+}
+
+ul.menu a {
+  color: black;
+  display: block;
+  padding: 0 30px;
+  text-decoration: none;
+  line-height: 50px;
+  background-color: #E8F5E9 ;
+}
+
+ul.menu li:hover>a {
+  /* 滑鼠移入次選單上層按鈕保持變色*/
+  background-color: gray;
+  color: white;
+}
+
+ul.menu ul {
+  /*隱藏次選單*/
+  display: none;
+}
+
+ul.menu li:hover>ul {
+  /* 滑鼠滑入展開次選單*/
+  display: block;
+}
+
+ul.menu ul {
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  min-width: 100%;
+}
+
+.car{
+   position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 105px;
+  left: 1110px;
+}
+.car:hover{background-color: gray;}
+
+.user{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 105px;
+  left: 1040px;
+}
+.user:hover{background-color: gray;}
+
+.user1{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 97px;
+  left: 1180px;
+}
+.user1:hover{background-color: gray;}
+
+.side-box{
+    position: absolute;
+    /*position: fixed;*/
+    right: 110px;
+    top: 95px;
+    width:170px;
+    height: 45px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+    box-shadow: 2px 2px 30px rgba(167, 158, 245, 0.2);
+    box-sizing: border-box;
+    z-index: 1;
+    border:1px solid rgba(167, 158, 245, 0.1);
+  }
+  
+  .search input{
+    width: 90px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #1F1F1F;
+    font-family: calibri;
+    font-size: 1rem;
+    padding: 0px 10px;
+    
+  }
+  
+  .search input::placeholder{
+    color: #1D1D1D;
+    font-weight:400;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-family: poppins;
+    
+  }
+  .search i{
+    margin: 0px auto;
+  }
+
+.link-top1 {
+    position: absolute;
+    top: 170px;
+    left: 72px;;
+    width: 90%;
+    border-top: solid #ACC0D8 4px;
+
+}
+.link-top4{
+    position: absolute;
+    top:205px;
+    left: 125px;
+    width: 84%;
+    border-top: solid rgb(127, 163, 223) 80px;
+}
+.ww{
+    position: absolute;
+   top:1700px;
+   left: 645px;
+  }
+
+
+    
+
+.cart-page{    
+    position: absolute;
+    top:210px;
+    left: 125px;
+    width: 1200px;
+    height: 700px;
+    
+}
+  
+   
+
+.pp{
+    width: 4.5cm;
+    height: 4.5cm;
+    margin-right: 10px;
+}
+
+.total-price{
+    position:absolute;
+    top: 1250px;
+    left: 830px;
+    width:10cm;
+    height: 10cm;
+    font-size: 20px;
+    
+}
+.total-price table{
+    border-top:3px solid #ACC0D8 ;
+    width: 100%;
+    max-width:1000px;
+    font-weight: bold;
+}
+
+ .c1{
+     width: 1300px;
+     height: 700px;
+     font-weight: bold;
+     box-align:"center"; 
+     border-bottom:3px solid #ACC0D8 ;
+        
+ }
+
+ .p1 { width:0.8cm;}
+
+.t1t{
+    position:absolute;
+    top: 900px;
+    left:200px;
+}
+
+ .h1{
+    position:relative;
+     top: 40px;
+     left:50px;
+ }
+
+ .txt{
+    position:relative;
+    top: 80px;
+    left: 70px;
+    font-weight: bold;
+    font-size: 20px;
+ }
+
+ .txt1{
+    border:1px;
+     border-bottom-style: solid;
+     border-top-style: none;
+     border-left-style:none;
+     border-right-style:none;
+     background-color: #E8F5E9;         
+}
+.txtt1{
+    position:relative;
+    top: 120px;
+    left: 70px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.txtt2{
+    position:relative;
+    top: 160px;
+    left: 70px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.button{
+    position: absolute;
+    top: 1000px;
+    left: 890px;
+    font-weight: bold;
+}
+
+
+.button1{
+    position: absolute;
+     height: 30px;
+    top:50px;
+    left: 100px;
+    font-weight: bold;
+}
+   
+.button2{
+    position: absolute;
+    height: 30px;
+    top:120px;
+    left: 100px;
+    font-weight: bold;
+}
+.b1{
+    position: absolute;
+    top: 1050px;
+    left: 865px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.b2{
+    position: absolute;
+    top: 1120px;
+    left: 865px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.p2{
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    top: 1400px;
+    left: 705px;
+    width: 140px;
+    background-color: rgb(134, 141, 165);
+}
+
