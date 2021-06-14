@@ -1,53 +1,41 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%@page contentType="text/html;charset=utf-8" language="java" import="java.sql.*"%>
-<%@include file="config.jsp" %>
+<%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <script src="https://kit.fontawesome.com/20b395cd79.js" crossorigin="anonymous"></script>
 
-<%
-
-if(!request.getParameter("name").equals("") && !request.getParameter("birthday").equals("") && !request.getParameter("email").equals("") && !request.getParameter("phone").equals("") && !request.getParameter("password").equals("") && !request.getParameter("passwordConfim").equals("")){
-
-
-    sql = "SELECT * FROM member WHERE PhoneNumber=? ";
-    PreparedStatement pstmt = null;
-	  pstmt=con.prepareStatement(sql);
-    pstmt.setString(1,request.getParameter("phone"));
-	  ResultSet paperrs = pstmt.executeQuery();
-    if(!paperrs.next()){            
-      if(request.getParameter("password").equals(request.getParameter("passwordConfim"))) {
-        try {
-          sql = "INSERT INTO member (MemberName, Birthday, Email, PhoneNumber, Password) VALUES (?,?,?,?,?)";
-          pstmt=con.prepareStatement(sql);
-          pstmt.setString(1,request.getParameter("name"));
-          pstmt.setString(2,request.getParameter("birthday"));
-          pstmt.setString(3,request.getParameter("email"));
-          pstmt.setString(4,request.getParameter("phone"));
-          pstmt.setString(5,request.getParameter("password"));
-          pstmt.execute();
-          out.println("<script type=\"text/javascript\">");
-          out.println("alert('註冊成功! 請重新登錄');");
-          out.println("location='register.html';");
-          out.println("</script>");
-        }
-          catch(SQLException e) {
-            out.println("SQL錯誤"+e.toString());
-        }
-      } else {
-        out.println("<script type=\"text/javascript\">");
-        out.println("alert('兩個密碼不相符!');");
-        out.println("location='register.html';");
-        out.println("</script>");
-      }
-    } else {
-        out.println("<script type=\"text/javascript\">");
-        out.println("alert('這個電話號碼已被註冊了!');");
-        out.println("location='register.html';");
-        out.println("</script>");
-    }
-} else {
-  out.println("<script type=\"text/javascript\">");
-   out.println("alert('請將所有資料填完!');");
-   out.println("location='register.html';");
-   out.println("</script>");
-}
-
-%>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+  <link rel="icon" href="image/title1.png" > 
+</head>
+<body style="background-color :#E8F5E9; ">
+      <jsp:include page="./include/header.jsp" />
+      <h1 class="h1">註冊帳號</h1>
+    <div class="registerbase" style="position: relative; top:150px ;">
+      <form action="./controller/register.jsp" method="post">
+        <div class="registertext">
+            <br><input type="text" class="registerbox" name="name" placeholder="姓名"><br>
+            <br><input type="date" class="registerbox" name="birthday" placeholder="生日"><br>
+            <br><input type="text" class="registerbox" name="email" placeholder="電子信箱"><br>
+            <br><input type="text" class="registerbox" name="phone" placeholder="手機號碼"><br>
+            <br><input type="password" class="registerbox" name="password" placeholder="密碼"><br>
+            <br><input type="password" class="registerbox" name="passwordConfim" placeholder="確認密碼"><br>
+        </div>
+        <div class="btn"><button class="registerbtn" type="submit">
+                確認
+            </button>
+        </div>
+    </form>
+        
+    </div>
+</div>
+</body>
+<div class="ww" style="width:300px; height: 100px;  vertical-align: middle;">
+  
+    <p>Copyright 2021 © All rights reserved.</p>
+  
+  </div>
+</html>
