@@ -15,26 +15,29 @@
 
   <jsp:include page="./include/header.jsp" />
 
-    <div class="signinbase" style="position: relative; top:150px ;">
-        <div class="signintext">
-            <br><input type="text" class="signinbox" placeholder="帳號:email/手機號碼"><br><br>
-            <br><input type="password" class="signinbox" placeholder="密碼">
+    <form action="./controller/signin.jsp" method="post">
+        <div class="signinbase" style="position: relative; top:150px ;">
+            <div class="signintext">
+                <br><input type="text" class="signinbox" placeholder="E-mail" name="email"><br><br>
+                <br><input type="password" class="signinbox" placeholder="密碼" name="password">
+            </div>
+            <div class="btn"><button class="signinbtn" type="submit">
+                    登入
+                </button>
+            </div>
+            </form>
+            <div class="or">
+                <div class="orl"></div>
+                <div class="ort">or</div>
+                <div class="orl" style="position: relative; top:-35px ;float: right;"></div>
+            </div>
+            
+            <div class="btn"><button class="signinbtn" onclick="location.href='register.html'">
+                    註冊帳號
+                </button>
+            </div>
         </div>
-        <div class="btn"><button class="signinbtn">
-                登入
-            </button>
-        </div>
-        <div class="or">
-            <div class="orl"></div>
-            <div class="ort">or</div>
-            <div class="orl" style="position: relative; top:-35px ;float: right;"></div>
-        </div>
-        
-        <div class="btn"><button class="signinbtn" onclick="location.href='register.html'">
-                註冊帳號
-            </button>
-        </div>
-    </div>
+    
 </div>
     
 </body>

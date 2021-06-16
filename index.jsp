@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import = "java.sql.*, java.util.* "%>
+<%@include file="config.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,28 +13,8 @@
  <link rel="icon" href="image/title1.png" > 
 </head>
 
-
-  
-
-
 <body style="background-color :#E8F5E9; ">
-   <a href="signin.html"><img src="image/user.png" class="user"></a>
-    
-
-    <a href="cart.html"><img src="image/cart.png" class="car" ></a>
-
-    <a href="user1.html"><img src="image/user1.png" class="user1" ></a>
-
-    <a href="#"><img src="image/signout.png" class="signout" ></a>
-    
-    <div class="side-box">
-      <div class="search">
-          <!--icon-->
-          <i class="fas fa-search"></i>
-          <input placeholder="Search" type="text" />
-      </div>
-    </div>
-    
+<jsp:include page="./include/header.jsp" />    
  
     <a href="index.html"><img src="image/logo.png" class="title"></a>
 
@@ -74,26 +57,13 @@
 
   </div>
 
+
+
+
+
   <div>
       <h1 class="h1">熱銷商品</h1>
   </div>
-  <img src="image/bag10.jpg" class="bag10">
-  <img src="image/bag6.jpg" class="bag6">
-  <img src="image/bag2.jpg" class=" bag2">
-
-    <h1 class=" top1">TOP 1</h1>
-    <a href="product 3-2.html" class="text10">
-        <pre>  Adidas 韓版帆布運動腰包!!!</pre></a>
-
-    <h1 class=" top2">TOP 2</h1>/
-    <a href="product 2-2.html" class="text6">
-        <pre>  潮人必備精品 NIKE包 相機包</pre></a>
-
-    <h1 class=" top3">TOP 3</h1>
-    <a href="product 1-2.html" class="text2">
-        <pre>  Adidas校園風大容量後背包</pre></a>
-
-
 
 
 
