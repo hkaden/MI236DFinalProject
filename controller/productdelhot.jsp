@@ -10,7 +10,7 @@ if(!request.getParameter("id").equals("") ){
             ProductDeleteQuery.setString(1, request.getParameter("id"));
             ProductDeleteQuery.execute();
               out.println("<script type=\"text/javascript\">");
-   out.println("alert('成功設為熱賣!!');");
+   out.println("alert('成功取消熱賣!!');");
    out.println("location='../productlist.jsp';");
    out.println("</script>");
     
