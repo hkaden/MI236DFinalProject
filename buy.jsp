@@ -44,7 +44,7 @@
      <tr style=" text-align: center; ">
        <td style="width: 150px;">
            <div class="cart-info">
-               <img class="pp" src="image/bag2.jpg">  </div>
+               <img class="pp" src="<%= ProductQueryResult.getString("Url") %>">  </div>
             </td>
 
                <td style="width: 370px; font-size: 25px;"><a href=""><p><%= ProductQueryResult.getString("ProductName") %></p></a>
