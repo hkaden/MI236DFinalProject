@@ -26,7 +26,7 @@
 <div class="container">
             <% 
             PreparedStatement ProductQuery = null;
-	        ProductQuery=con.prepareStatement("SELECT * FROM product WHERE ClassId = ?");
+	        ProductQuery=con.prepareStatement("SELECT * FROM product WHERE ClassId = ? AND Stock > 0");
             ProductQuery.setString(1, request.getParameter("id"));
             ResultSet ProductQueryResult = ProductQuery.executeQuery();
             while (ProductQueryResult.next()) {
