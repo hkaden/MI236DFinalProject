@@ -16,7 +16,7 @@
 
 <body style="background-color :#E8F5E9; ">
   <jsp:include page="./include/header.jsp" />    
-  <a href="login.html"><button class="administratorbtn" > 管理員點這</button></a>
+  <a href="admin.jsp"><button class="administratorbtn" > 管理員頁面</button></a>
    
 
     <%
@@ -64,31 +64,64 @@
     <div class="link-top2"></div>
     <div class="t2"><pre>  消費&評分評論紀錄</pre></div>
 
-    <img src="image/bag9.jpg" style="border:2px black solid;" class="bag1" >
+    
 
     <div class="t1">
-        <a href="product 3-1.html"  style="text-decoration:none;" ><h2 class="a1">NIKE 大容量多功能運動腰包</h2></a> 
-        <div class="t-1">
-            <pre style="font-size: 20px;" >  
-                喜歡:<img src="image/4star.JPG"  class="star" > <br>                數量:1<br>                金額:950        
-                評論:材質很好，我很喜歡!                              
-                                                                        購買日期:2019/04/20
-                         
-                       </pre> 
-       </div>
-    </div>
+      <div class="container">
+      <%
+      sql = "SELECT * FROM `order` INNER JOIN `product` ON order.ProductId = product.ProductId INNER JOIN `member` ON order.MemberId = member.MemberId WHERE member.Email = ?;"; 
+      PreparedStatement pstmt2 = null;
+	    pstmt2=con.prepareStatement(sql);
+      pstmt2.setString(1,(String)session.getAttribute("email"));
+      ResultSet paperrs12 = pstmt2.executeQuery();
+      while(paperrs12.next()){
+        PreparedStatement reviewQuery = null;
+        reviewQuery = con.prepareStatement("SELECT * FROM `review` WHERE OrderId = ?");
+        reviewQuery.setString(1, paperrs12.getString("OrderId"));
+        ResultSet reviewQueryResult = reviewQuery.executeQuery();
+      %>
+       
+        <div class="item">
+          <div class="itemPic">
+            <img src="image/bag9.jpg" style="border:2px black solid;" >
+          </div>
+              <a href="product 3-1.html"  style="text-decoration:none;" ><h2 class="a1"><%=paperrs12.getString("ProductName")%></h2></a> 
 
-    <img src="image/bag2.jpg" style="border:2px black solid;" class="bag2" >
+                  <p style="font-size: 20px;" >  
+                  <% if ( reviewQueryResult.next()) { %>
+                      <img src="image/<%=reviewQueryResult.getString("Score")%>star.png" ><br>
+                      數量:<%=paperrs12.getString("Quantity")%><br>
+                      金額:$<%=paperrs12.getString("Total")%><br>
+                      購買日期:<%=paperrs12.getString("Date")%><br>
+                      評價:<%=reviewQueryResult.getString("Comment")%><br>
+                      
+                      <% } else { %>
+                                          
+                      數量:<%=paperrs12.getString("Quantity")%><br>
+                      金額:$<%=paperrs12.getString("Total")%><br>
+                      購買日期:<%=paperrs12.getString("Date")%><br>
+                      <form method="post" action="./controller/complateOrder.jsp">
+                       <input type="hidden" name="orderId" value="<%= paperrs12.getString("OrderId") %>">
+                      <select name="score">
+                        <option value="" selected>請為這件商品評分</option>
+                        <option value="1">1分</option>
+                        <option value="2">2分</option>
+                        <option value="3">3分</option>
+                        <option value="4">4分</option>
+                        <option value="5">5分</option>
+                      </select>
+<textarea name="comment" rows="4" cols="50" type="text" placeholder="留下運語吧"></textarea>
+                     <button class="complatebtn" type="submit">
+                              確認收貨
+                          </button>     
+                                         </form>                                     
+                              <% } %>
+                            </p> 
 
-    <div class="t3">
-        <a href="product 1-2.html"  style="text-decoration:none;" ><h2 class="a1">Adidas校園風大容量後背包</h2></a> 
-        <div class="t-2">
-            <pre style="font-size: 20px;" >  
-                喜歡:<img src="image/3star.png"  class="star2" > <br>                數量:1<br>                金額:1550        
-                評論:容量很大，很喜歡!                              
-                                                                        購買日期:2020/07/10
-                         
-                       </pre>     
+        </div>
+        
+      <% } %>
+
        </div>
     </div>
 

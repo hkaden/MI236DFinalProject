@@ -177,6 +177,16 @@ ul.menu ul {
    
   }
 
+  .complatebtn {
+    font-size: 30px;
+    background-color: rgb(117, 201, 138);
+    border-radius: 10px;
+    border: 7px solid gray(131, 189, 243);
+    color: white;
+    width: 100%;
+   
+  }
+
   .administratorbtn {
     position: absolute;
     top:200px;
@@ -216,7 +226,7 @@ ul.menu ul {
 .t2{
     position: absolute;
     top: 880px;
-    left: 600px;
+    left: 45%;
     width: 250px;
     height: 50px;
     border-width:2px;
@@ -321,4 +331,18 @@ ul.menu ul {
     width: 90%;
     border-top: solid #ACC0D8 4px;
 
+}
+
+.container {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.item {
+  margin: 0 15px;
+}
+.itemPic img{
+  display: block;
 }
