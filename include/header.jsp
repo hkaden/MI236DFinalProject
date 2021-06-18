@@ -1,11 +1,10 @@
 <%@include file="../config.jsp" %>
 <%@page contentType="text/html;charset=utf-8" language="java" import="java.sql.*"%>
 
-    <a href="signin.html"><img src="./image/user.png" class="user"></a>
+    <a href="signin.jsp"><img src="./image/user.png" class="user"></a>
 
-    <a href="cart.html"><img src="./image/cart.png" class="car" ></a>
 
-    <a href="user1.html"><img src="./image/user1.png" class="user1" ></a>
+    <a href="user.jsp"><img src="./image/user1.png" class="user1" ></a>
     
     <div class="side-box">
       <div class="search">
