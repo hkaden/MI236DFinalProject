@@ -258,7 +258,7 @@ ul.menu ul {
   top:820px;
   left: 200px;
 }
-.bag10:hover{ transform: scale(1.2)}
+.item > img:hover{ transform: scale(1.2)}
 .top1{
   position: absolute;
   top:760px;
@@ -267,9 +267,6 @@ ul.menu ul {
 }
 
 .text10{
-  position: absolute;
-  top:1150px;
-  left: 230px;
   font-size: 20px;
 }
 
@@ -315,3 +312,18 @@ ul.menu ul {
 }
 
 
+.container {
+  position: absolute;
+  top:820px;
+  left: 200px;
+display:flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: flex-start;
+flex-wrap: nowrap;
+
+}
+
+.item {
+  margin-right: 10px;
+}

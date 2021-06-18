@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*, java.util.* "%>
-<%@include file="config.jsp" %>
+<%@include file="./config.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +46,24 @@
   </div>
 
 
+<div class="container">
+            <% 
+            PreparedStatement ProductQuery = null;
+	        ProductQuery=con.prepareStatement("SELECT * FROM product WHERE isHotSale = 1");
+            ResultSet ProductQueryResult = ProductQuery.executeQuery();
+            while (ProductQueryResult.next()) {
 
+            
+            
+        %>
+<div class="item">
+    <img src="<%= ProductQueryResult.getString("Url") %>" class="">
+    <a href="product.jsp?id=<%= ProductQueryResult.getString("ProductId") %>" class="text10">
+        <pre>  <%= ProductQueryResult.getString("ProductName") %></pre></a>
+</div>
 
-
+<% } %>
+</div>
 
  
 

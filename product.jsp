@@ -39,12 +39,13 @@
 <h1 class="t1"><%= ProductQueryResult.getString("ProductName") %></h1>
 <h2 class="price" >NT$ <%= ProductQueryResult.getString("Price") %> </h2>
 
-
- <input class="number" type="number" value="1"  min="1" max="6"/>
+<form method="get" action="buy.jsp">
+<input type="hidden" name="productId" value="<%= ProductQueryResult.getString("ProductId") %>">
+ <input class="number" name="amount" type="number" value="1"  min="1" max="<%= ProductQueryResult.getString("Stock") %>"/>
  <p class="t">庫存 <%= ProductQueryResult.getString("Stock") %></p>
- <a href="cart.html" class="btn">加入購物車</a>
+ <button type="submit" class="btn">購買</button>
 </div>
-
+</form>
 <div class="link-top2"></div>
  <div class="t2"><pre>           產品資訊</pre></div>
 

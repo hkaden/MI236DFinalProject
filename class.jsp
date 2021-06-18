@@ -44,7 +44,7 @@
             介紹: <%= ProductQueryResult.getString("Description") %><br>
             庫存: <%= ProductQueryResult.getString("Stock") %><br>
 
-                     <br><a href="cart.html"><input class="" type="button" value="加入購物車"></a>
+                     <br><a href="buy.jsp?productId=<%= ProductQueryResult.getString("ProductId") %>&amount=1"><input class="" type="button" value="購買"></a>
    </div>
     
 </div>
