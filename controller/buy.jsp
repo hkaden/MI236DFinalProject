@@ -11,9 +11,10 @@ if(!request.getParameter("productId").equals("") && !request.getParameter("amoun
             PreparedStatement ProductUpadteQuery = null;
             MemberQuery = con.prepareStatement("SELECT * FROM member WHERE Email=?");
             MemberQuery.setString(1, (String)session.getAttribute("email"));
-            ProductUpadteQuery = con.prepareStatement("UPDATE product SET Stock = ? WHERE ProductId =?");
+            ProductUpadteQuery = con.prepareStatement("UPDATE product SET Stock = ?, Saled = ? WHERE ProductId =?");
             ProductUpadteQuery.setInt(1, Integer.parseInt(request.getParameter("stock")) - Integer.parseInt(request.getParameter("amount")));
-            ProductUpadteQuery.setString(2, request.getParameter("productId"));
+            ProductUpadteQuery.setInt(2, Integer.parseInt(request.getParameter("amount")));
+            ProductUpadteQuery.setString(3, request.getParameter("productId"));
             ResultSet MemberQueryResult = MemberQuery.executeQuery();
 
             if(MemberQueryResult.next()) {
