@@ -5,7 +5,7 @@
 
 
     <a href="user.jsp"><img src="./image/user1.png" class="user1" ></a>
-    
+    <a href="logout.jsp" class="user1" style="left: 1110px;">登出</a>
     <div class="side-box">
       <div class="search">
           <!--icon-->
