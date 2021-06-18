@@ -66,6 +66,7 @@
 <form method="post" action="./controller/buy.jsp">
 <input class="txt1" type="hidden" name="productId" value="<%= ProductQueryResult.getString("ProductId") %>"/>
 <input class="txt1" type="hidden" name="amount" value="<%= request.getParameter("amount") %>"/>
+<input class="txt1" type="hidden" name="stock" value="<%= ProductQueryResult.getString("Stock") %>"/>
 <input class="txt1" type="hidden" name="total" value="<%= Integer.parseInt(ProductQueryResult.getString("Price")) * Integer.parseInt(request.getParameter("amount"))%>"/>
 
 姓名:<input class="txt1" type="text" name="name" size="15" />
