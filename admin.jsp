@@ -28,7 +28,7 @@
         <a href="orderlist.jsp"><button>查看訂單</button></a>
         </div>
               <div class="btnItem">
-        <button>商品編輯</button>
+        <a href="messagelist.jsp"><button>查看留言</button></a>
         </div>
     </div>
 
