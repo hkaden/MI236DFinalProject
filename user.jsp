@@ -83,7 +83,7 @@
        
         <div class="item">
           <div class="itemPic">
-            <img src="image/bag9.jpg" style="border:2px black solid;" >
+            <img src="<%=paperrs12.getString("Url")%>" style="border:2px black solid;" >
           </div>
               <a href="product 3-1.html"  style="text-decoration:none;" ><h2 class="a1"><%=paperrs12.getString("ProductName")%></h2></a> 
 
