@@ -1,3 +1,5 @@
+
+<%@page contentType="text/html;charset=utf-8" language="java" import="java.sql.*"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,47 +17,11 @@
 
 
 <body style="background-color :#E8F5E9; ">
-    <a href="signin.html"><img src="image/user.png" class="user"></a>
-
-    <a href="cart.html"><img src="image/cart.png" class="car" ></a>
-
-    <a href="user1.html"><img src="image/user1.png" class="user1" ></a>
-    
-    <div class="side-box">
-      <div class="search">
-          <!--icon-->
-          <i class="fas fa-search"></i>
-          <input placeholder="Search" type="text" />
-      </div>
-    </div>
-    
- 
-    <a href="index.jsp"><img src="image/logo.png" class="title"></a>
-
-
-    <ul class="menu">
-
-      <li><a href="index.jsp">首頁</a>
-      </li>
-      <li><a href="">商品分類▾</a>
-        <ul>
-          <li><a href="product 1.html">後背包</a>
-          </li>
-          <li><a href="product 2.html">側背包</a>
-          </li>
-          <li><a href="product 3.html">腰包</a>
-        </ul>
-      </li>
-      <li><a href="aboutus.html">關於我們</a>
-      </li>
-      <li><a href="contactus.html">聯絡我們</a>
-      
-    </ul>
-
+<jsp:include page="./include/header.jsp" />
     <div class="link-top1"></div>
 
     <div class="contact">
-        <form class="container">
+        <form class="container" method="post" action="./controller/contactus.jsp">
          
           
           <label for="name"><b>姓名</b></label>
@@ -65,9 +31,9 @@
           <input type="text" class="textn" placeholder="email" name="email">
   
           <label for="say"><b>您的建議</b></label><br>
-          <textarea placeholder="say somthing" name="say"
+          <textarea placeholder="say somthing" name="message"
             style="height:200px;width:100%;padding: 12px 20px; background-color:#f1f1f1;border: none;"></textarea>
-          <button type="sent" class="btn" style="position: relative; left: 160px;">送出</button>
+          <button type="submit" class="btn" style="position: relative; left: 160px;">送出</button>
         </form>
       </div>
 

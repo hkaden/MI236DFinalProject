@@ -37,7 +37,7 @@
       </li>
       <li><a href="aboutus.html">關於我們</a>
       </li>
-      <li><a href="contactus.html">聯絡我們</a>
+      <li><a href="contactus.jsp">聯絡我們</a>
       
     </ul>
 
