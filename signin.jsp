@@ -15,8 +15,9 @@
 
   <jsp:include page="./include/header.jsp" />
 
-    <form action="./controller/signin.jsp" method="post">
+
         <div class="signinbase" style="position: relative; top:150px ;">
+            <form action="./controller/signin.jsp" method="post">
             <div class="signintext">
                 <br><input type="text" class="signinbox" placeholder="E-mail" name="email"><br><br>
                 <br><input type="password" class="signinbox" placeholder="密碼" name="password">
@@ -32,9 +33,12 @@
                 <div class="orl" style="position: relative; top:-35px ;float: right;"></div>
             </div>
             
-            <div class="btn"><button class="signinbtn" onclick="location.href='register.html'">
+            <div class="btn">
+
+            <button class="signinbtn" onclick="location.href='register.jsp'">
                     註冊帳號
                 </button>
+               
             </div>
         </div>
     
