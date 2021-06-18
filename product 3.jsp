@@ -27,7 +27,7 @@
     
     
  
-    <a href="index.html"><img src="image/logo.png" class="title"></a>
+    <a href="index.jsp"><img src="image/logo.png" class="title"></a>
 
     <div class="side-box">
         <div class="search">
@@ -39,7 +39,7 @@
 
     <ul class="menu">
 
-      <li><a href="index.html">首頁</a>
+      <li><a href="index.jsp">首頁</a>
       </li>
       <li><a href="product 3.jsp">腰包▾</a>
         <ul>

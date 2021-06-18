@@ -16,27 +16,7 @@
 <body style="background-color :#E8F5E9; ">
 <jsp:include page="./include/header.jsp" />    
  
-    <a href="index.html"><img src="image/logo.png" class="title"></a>
 
-
-    <ul class="menu">
-
-      <li><a href="index.html">首頁</a>
-      </li>
-      <li><a href="">商品分類▾</a>
-        <ul>
-          <li><a href="product 1.jsp">後背包</a>
-          </li>
-          <li><a href="product 2.jsp">側背包</a>
-          </li>
-          <li><a href="product 3.jsp">腰包</a>
-        </ul>
-      </li>
-      <li><a href="aboutus.html">關於我們</a>
-      </li>
-      <li><a href="contactus.html">聯絡我們</a>
-      
-    </ul>
     
     
     <div class="social">

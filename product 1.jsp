@@ -26,7 +26,7 @@
     <a href="user1.html"><img src="image/user1.png" class="user1" ></a>
     
  
-    <a href="index.html"><img src="image/logo.png" class="title"></a>
+    <a href="index.jsp"><img src="image/logo.png" class="title"></a>
 
     <div class="side-box">
         <div class="search">
@@ -38,7 +38,7 @@
 
     <ul class="menu">
 
-      <li><a href="index.html">首頁</a>
+      <li><a href="index.jsp">首頁</a>
       </li>
       <li><a href="product 1.jsp">後背包▾</a>
         <ul>
