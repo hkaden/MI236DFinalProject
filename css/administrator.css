@@ -154,7 +154,31 @@ ul.menu ul {
   }
 
   /*商品編輯*/
+.container {
+      position: absolute;
+    top: 225px;
+    left: 630px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 
+}
+
+.btnItem button {
+  border-width:2px;
+  border-style:solid;
+  border-color:black;
+  background:#D7FFEE;
+  font-weight:bold;
+  display: flex;         
+  align-items: center;
+  text-align:center;
+  font-size: 25px;
+  margin: 0 15px;
+
+}
  
 .t2{
     position: absolute;
