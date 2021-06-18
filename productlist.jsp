@@ -48,7 +48,7 @@
     <td><%= ProductQueryResult.getString("Price") %></td>
     <td><%= ProductQueryResult.getString("Stock") %></td>
     <td><%= ProductQueryResult.getString("Saled") %></td>
-    <td><a href="./productedit.jsp?id=<%= ProductQueryResult.getString("ProductId") %>">修改</a>&nbsp;<a href="./controller/productdelete.jsp?id=<%= ProductQueryResult.getString("ProductId") %>">刪除</a>&nbsp;<a href="./controller/producthot.jsp?id=<%= ProductQueryResult.getString("ProductId") %>">設為熱賣</a></td>
+    <td><a href="./productedit.jsp?id=<%= ProductQueryResult.getString("ProductId") %>">修改</a>&nbsp;<a href="./controller/productdelete.jsp?id=<%= ProductQueryResult.getString("ProductId") %>">刪除</a>&nbsp;<a href="./controller/producthot.jsp?id=<%= ProductQueryResult.getString("ProductId") %>">設為熱賣</a>&nbsp;<a href="./controller/productdelhot.jsp?id=<%= ProductQueryResult.getString("ProductId") %>">取消熱賣</a></td>
         </tr>
 
         <% } %>
