@@ -13,7 +13,7 @@ if(!request.getParameter("productId").equals("") ){
             ResultSet MemberQueryResult = MemberQuery.executeQuery();
             if(MemberQueryResult.next()) {
                 out.println(MemberQueryResult.getString("MemberId"));
-	        ProductDeleteQuery=con.prepareStatement("INSERT INTO `order` (Date, Quantity, Total, MemberId, ProductId, PaymentMethod, ShippingMethod, phone, Address, Email) VALUES (?,?,?,?,?,?,?,?,?,?)");
+	        ProductDeleteQuery=con.prepareStatement("INSERT INTO `order` (Date, Quantity, Total, MemberId, ProductId, PaymentMethod, ShippingMethod, phone, Address, Email, Name) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
             ProductDeleteQuery.setString(1, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
             ProductDeleteQuery.setString(2, request.getParameter("amount"));
             ProductDeleteQuery.setString(3, request.getParameter("total"));
@@ -24,6 +24,7 @@ if(!request.getParameter("productId").equals("") ){
             ProductDeleteQuery.setString(8, request.getParameter("phone"));
             ProductDeleteQuery.setString(9, request.getParameter("Address"));
             ProductDeleteQuery.setString(10, request.getParameter("Email"));
+             ProductDeleteQuery.setString(11, request.getParameter("name"));
             ProductDeleteQuery.execute();
               out.println("<script type=\"text/javascript\">");
             out.println("alert('下單成功!!');");
