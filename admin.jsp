@@ -30,6 +30,10 @@
               <div class="btnItem">
         <a href="messagelist.jsp"><button>查看留言</button></a>
         </div>
+
+                      <div class="btnItem">
+        <a href="productreviewlist.jsp"><button>查看訂單評價</button></a>
+        </div>
     </div>
 
 </body>
