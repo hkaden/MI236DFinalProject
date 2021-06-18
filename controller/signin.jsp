@@ -16,7 +16,7 @@ if(request.getParameter("email") !=null && request.getParameter("password") != n
 	ResultSet paperrs = pstmt.executeQuery();
     
     if(paperrs.next()){            
-        session.setMaxInactiveInterval(30*60)
+        session.setMaxInactiveInterval(30*60);
         session.setAttribute("email",request.getParameter("email"));
         response.sendRedirect("../user.jsp") ;
     }
