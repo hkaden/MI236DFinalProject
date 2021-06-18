@@ -25,7 +25,7 @@
         <a href="productadd.jsp"><button>新增商品</button></a>
         </div>
               <div class="btnItem">
-        <button>商品編輯</button>
+        <a href="orderlist.jsp"><button>查看訂單</button></a>
         </div>
               <div class="btnItem">
         <button>商品編輯</button>
