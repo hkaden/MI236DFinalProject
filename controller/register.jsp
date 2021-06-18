@@ -7,10 +7,11 @@
 if(!request.getParameter("name").equals("") && !request.getParameter("birthday").equals("") && !request.getParameter("email").equals("") && !request.getParameter("phone").equals("") && !request.getParameter("password").equals("") && !request.getParameter("passwordConfim").equals("")){
 
 
-    sql = "SELECT * FROM member WHERE PhoneNumber=? ";
+    sql = "SELECT * FROM member WHERE PhoneNumber=? OR Email=?";
     PreparedStatement pstmt = null;
 	  pstmt=con.prepareStatement(sql);
     pstmt.setString(1,request.getParameter("phone"));
+    pstmt.setString(2,request.getParameter("email"));
 	  ResultSet paperrs = pstmt.executeQuery();
     if(!paperrs.next()){            
       if(request.getParameter("password").equals(request.getParameter("passwordConfim"))) {
@@ -39,7 +40,7 @@ if(!request.getParameter("name").equals("") && !request.getParameter("birthday")
       }
     } else {
         out.println("<script type=\"text/javascript\">");
-        out.println("alert('這個電話號碼已被註冊了!');");
+        out.println("alert('這個電話號碼/Email已被註冊了!');");
         out.println("location='../register.jsp';");
         out.println("</script>");
     }
