@@ -5,7 +5,7 @@
 <%@ page import="java.util.Date"%>
 <%
 request.setCharacterEncoding("UTF-8");
-if(!request.getParameter("productId").equals("") ){
+if(!request.getParameter("productId").equals("") && !request.getParameter("amount").equals("") && !request.getParameter("name").equals("") && !request.getParameter("phone").equals("") && !request.getParameter("Email").equals("")  && !request.getParameter("Address").equals("") ){
             PreparedStatement MemberQuery = null;
             PreparedStatement ProductDeleteQuery = null;
             MemberQuery = con.prepareStatement("SELECT * FROM member WHERE Email=?");
@@ -40,8 +40,8 @@ if(!request.getParameter("productId").equals("") ){
     
 } else {
   out.println("<script type=\"text/javascript\">");
-   out.println("alert('參數不得留空!!');");
-   out.println("location='../user.jsp';");
+   out.println("alert('資料未填完呢!!!');");
+   out.println("location='../class.jsp?id=1';");
    out.println("</script>");
 }
 
