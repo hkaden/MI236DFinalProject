@@ -14,6 +14,17 @@
 </head>
 
 <body style="background-color :#E8F5E9; ">
+<% 
+         Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+         if( hitsCount ==null || hitsCount == 0 ) {
+            /* First visit */
+            hitsCount = 1;
+         } else {
+            /* return visit */
+            hitsCount += 1;
+         }
+         application.setAttribute("hitCounter", hitsCount);
+%>
 <jsp:include page="./include/header.jsp" />    
  
 
@@ -72,7 +83,7 @@
 
 <div class="ww" style="width:300px; height: 100px;  vertical-align: middle;">
   
-  <p>Copyright 2021 © All rights reserved.</p>
+  <p>Copyright 2021 © All rights reserved. 本網站已被訪問 <%= hitsCount%> 次</p>
 
 </div>
 
